@@ -32,5 +32,16 @@ function compute() {
             result = NaN;
             break;
     }
-    document.getElementById("result").innerHTML = result;
+    document.getElementById("result").innerText = result;
+}
+
+function constraint() {
+    var form = document.getElementById('myForm');
+    if (isNaN(parseFloat(form.elements["first-number"].value))) {
+        document.getElementById("notice").innerText = "Số thứ nhất chưa được nhập hoặc không đúng định dạng";
+    }
+    else
+        if (isNaN(parseFloat(form.elements["second-number"].value))) {
+            document.getElementById("notice").innerHTML = "Số thứ hai chưa được nhập hoặc không đúng định dạng";
+        }
 }

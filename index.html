@@ -13,12 +13,12 @@
 <script src="compute.js"></script>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="h1">Bé tập tính</h1>
         <form id="myForm">
             <div class="row">
-                <label for="first-number" class="col-xl-1">Số thứ nhất</label>
-                <input type="text" id="first-number" name="first-number" class="col-xl-4">
+                <label for="first-number" class="col-xl-2">Số thứ nhất</label>
+                <input type="text" id="first-number" name="first-number" class="col-xl-4" onblur="constraint()">
                 <div class="col-xl-4">
                     <input type="radio" id="plus" name="operator" value="+">
                     <label for="plus"> Cộng</label>
@@ -27,8 +27,8 @@
                 </div>
             </div>
             <div class="row">
-                <label for="second-number" class="col-xl-1">Số thứ hai</label>
-                <input type="text" id="second-number" name="second-number" class="col-xl-4">
+                <label for="second-number" class="col-xl-2">Số thứ hai</label>
+                <input type="text" id="second-number" name="second-number" onblur="constraint()" class="col-xl-4">
                 <div class="col-xl-4">
                     <input type="radio" id="multi" name="operator" value="*">
                     <label for="multi">Nhân</label>
@@ -38,14 +38,15 @@
             </div>
         </form>
         <div class="row">
-            <label for="result" class="col-xl-1">Kết quả</label>
-            <output type="text" id="result" name="result" class="col-xl-4"><br>
-            <input type="button" value="Tính" onclick="compute(myForm)" class="col-xl-2">
+            <label for="result" class="col-xl-2">Kết quả</label>
+            <output type="text" id="result" name="result" class="col-xl-4"></output>
+            <button type="button" onclick="compute(myForm)" class="col-xl-1">Tính</button>
         </div>
         <div class="row">
-            <label for="result" class="col-xl-1">Thông báo</label>
-            <output type="text" id="notice" name="result"><br>
+            <label for="result" class="col-xl-2">Thông báo</label>
+            <output type="text" id="notice" name="notice" class="col-xl-4">
         </div>
+        <div class="row"></div>
     </div>
 </body>
 
