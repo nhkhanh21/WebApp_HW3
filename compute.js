@@ -35,8 +35,7 @@ function compute() {
     document.getElementById("result").innerText = result;
     if (isNaN(result)) {
         document.getElementById("notice").innerText = "Lỗi phép tính hoặc định dạng số!";
-    } else
-    {
+    } else {
         document.getElementById("notice").innerText = "Thành công!";
     }
 }
@@ -46,8 +45,10 @@ function constraint() {
     if (isNaN(parseFloat(form.elements["first-number"].value))) {
         document.getElementById("notice").innerText = "Số thứ nhất chưa được nhập hoặc không đúng định dạng!";
     }
-    else
-        if (isNaN(parseFloat(form.elements["second-number"].value))) {
-            document.getElementById("notice").innerHTML = "Số thứ hai chưa được nhập hoặc không đúng định dạng!";
-        }
+    if (isNaN(parseFloat(form.elements["second-number"].value))) {
+        document.getElementById("notice").innerHTML = "Số thứ hai chưa được nhập hoặc không đúng định dạng!";
+    }
+    if (!isNaN(parseFloat(form.elements["first-number"].value)) &&
+    !isNaN(parseFloat(form.elements["second-number"].value)))
+    {document.getElementById("notice").innerText = " "; }
 }
