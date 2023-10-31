@@ -1,0 +1,10 @@
+div
+{
+    display: flexbox;
+}
+
+#result
+{
+    border-color: aquamarine;
+    color: green    ;
+}
