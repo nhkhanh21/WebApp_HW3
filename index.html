@@ -20,20 +20,20 @@
                 <label for="first-number" class="col-xl-2">Số thứ nhất</label>
                 <input type="text" id="first-number" name="first-number" class="col-xl-4" onblur="constraint()">
                 <div class="col-xl-4">
-                    <input type="radio" id="plus" name="operator" value="+">
-                    <label for="plus"> Cộng</label>
-                    <input type="radio" id="minus" name="operator" value="-">
-                    <label for="minus">Trừ</label>
+                    <input type="radio" id="plus" name="operator" value="+" class="operator">
+                    <label for="plus" class="operator"> Cộng</label>
+                    <input type="radio" id="minus" name="operator" value="-" class="operator">
+                    <label for="minus" class="operator">Trừ</label>
                 </div>
             </div>
             <div class="row">
                 <label for="second-number" class="col-xl-2">Số thứ hai</label>
                 <input type="text" id="second-number" name="second-number" onblur="constraint()" class="col-xl-4">
                 <div class="col-xl-4">
-                    <input type="radio" id="multi" name="operator" value="*">
-                    <label for="multi">Nhân</label>
-                    <input type="radio" id="divide" name="operator" value="/">
-                    <label for="divide">Chia</label>
+                    <input type="radio" id="multi" name="operator" value="*" class="operator">
+                    <label for="multi" class="operator">Nhân</label>
+                    <input type="radio" id="divide" name="operator" value="/" class="operator">
+                    <label for="divide" class="operator">Chia</label>
                 </div>
             </div>
         </form>

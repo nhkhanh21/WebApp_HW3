@@ -28,20 +28,26 @@ function compute() {
             document.getElementById("notice").innerText = "";
             break;
         default:
-            document.getElementById("notice").innerText = "Lỗi phép tính hoặc định dạng số";
+            document.getElementById("notice").innerText = "Lỗi phép tính hoặc định dạng số!";
             result = NaN;
             break;
     }
     document.getElementById("result").innerText = result;
+    if (isNaN(result)) {
+        document.getElementById("notice").innerText = "Lỗi phép tính hoặc định dạng số!";
+    } else
+    {
+        document.getElementById("notice").innerText = "Thành công!";
+    }
 }
 
 function constraint() {
     var form = document.getElementById('myForm');
     if (isNaN(parseFloat(form.elements["first-number"].value))) {
-        document.getElementById("notice").innerText = "Số thứ nhất chưa được nhập hoặc không đúng định dạng";
+        document.getElementById("notice").innerText = "Số thứ nhất chưa được nhập hoặc không đúng định dạng!";
     }
     else
         if (isNaN(parseFloat(form.elements["second-number"].value))) {
-            document.getElementById("notice").innerHTML = "Số thứ hai chưa được nhập hoặc không đúng định dạng";
+            document.getElementById("notice").innerHTML = "Số thứ hai chưa được nhập hoặc không đúng định dạng!";
         }
 }
