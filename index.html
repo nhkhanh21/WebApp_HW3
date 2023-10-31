@@ -15,43 +15,38 @@
 <body>
     <div class="container">
         <h1 class="h1">Bé tập tính</h1>
-
-        <div class="row">
-            <form id="myForm">
-                <div class="col-md-3">
-                    <label for="first-number">Số thứ nhất</label>
-                    <input type="text" id="first-number" name="first-number">
-                    <label for="second-number">Số thứ hai</label>
-                    <input type="text" id="second-number" name="second-number">
-                </div>
-                <div class="column-gap-3">
+        <form id="myForm">
+            <div class="row">
+                <label for="first-number" class="col-xl-1">Số thứ nhất</label>
+                <input type="text" id="first-number" name="first-number" class="col-xl-4">
+                <div class="col-xl-4">
                     <input type="radio" id="plus" name="operator" value="+">
                     <label for="plus"> Cộng</label>
                     <input type="radio" id="minus" name="operator" value="-">
                     <label for="minus">Trừ</label>
+                </div>
+            </div>
+            <div class="row">
+                <label for="second-number" class="col-xl-1">Số thứ hai</label>
+                <input type="text" id="second-number" name="second-number" class="col-xl-4">
+                <div class="col-xl-4">
                     <input type="radio" id="multi" name="operator" value="*">
                     <label for="multi">Nhân</label>
                     <input type="radio" id="divide" name="operator" value="/">
                     <label for="divide">Chia</label>
                 </div>
-                <div class="col-2">
-                    <input type="button" value="Tính" onclick="compute(myForm)">
-                </div>
-        </div>
-
+            </div>
         </form>
         <div class="row">
-            <div>
-                <label for="result">Kết quả</label>
-                <output type="text" id="result" name="result"><br>
-            </div>
-            <div>
-                <label for="result">Thông báo</label>
-                <output type="text" id="notice" name="result"><br>
-            </div>
+            <label for="result" class="col-xl-1">Kết quả</label>
+            <output type="text" id="result" name="result" class="col-xl-4"><br>
+            <input type="button" value="Tính" onclick="compute(myForm)" class="col-xl-2">
+        </div>
+        <div class="row">
+            <label for="result" class="col-xl-1">Thông báo</label>
+            <output type="text" id="notice" name="result"><br>
         </div>
     </div>
-
 </body>
 
 </html>
